@@ -14,9 +14,22 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
+
 from django.contrib import admin
-from django.urls import path
+from django.urls import path , include
+from PPM_App.Views import PollCreateView, ResponseCreateView, PollResultsView, Register, Dashboard
+from django.contrib.auth.views import LoginView, LogoutView
 
 urlpatterns = [
+    path('', Register, name='Register'),
+    path('polls/', PollCreateView.as_view(), name='create_poll'),
+    path('polls/<int:poll_id>/responses/', ResponseCreateView.as_view(), name='submit_response'),
+    path('polls/<int:poll_id>/results/', PollResultsView.as_view(), name='poll_results'),
     path('admin/', admin.site.urls),
+    path('api-auth/', include('rest_framework.urls')),
+    path('register/', Register, name='Register'),
+    path('login/', LoginView.as_view(template_name='Login.html'), name='Login'),
+    path('logout/', LogoutView.as_view(), name='Logout'),
+    path('dashboard/', Dashboard, name='Dashboard'),
 ]
