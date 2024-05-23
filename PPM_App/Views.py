@@ -7,7 +7,7 @@ from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 
-from PPM_App.Forms import PollForm
+from PPM_App.Forms import PollForm, ChoiceFormSet
 
 class PollCreateView(generics.CreateAPIView):
     queryset = Poll.objects.all()
@@ -23,6 +23,8 @@ class PollResultsView(generics.RetrieveAPIView):
     queryset = Poll.objects.all()
     serializer_class = PollSerializer
     permission_classes = [IsAuthenticated]
+
+
 
 def Register(request):
     if request.method == 'POST':
@@ -47,11 +49,8 @@ def Logout(request):
 
 def PollCreate(request):
     if request.method == 'POST':
-        form = PollForm(request.POST)
-        if form.is_valid():
-            poll = form.save(commit=False)
-            poll.save()
-            return redirect('Dashboard')
+
+        return redirect('Dashboard')
     else:
-        form = PollForm()
-    return render(request, 'Create_poll.html', {'form': form})
+
+        return render(request, 'Create_poll.html')

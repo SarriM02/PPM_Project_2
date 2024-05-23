@@ -2,13 +2,50 @@
 <html>
 <head>
     <title>Create a new poll</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 <h1>Create a new poll</h1>
-<form method="post">
+<form method="post" action="{% url 'create_poll' %}">
     {% csrf_token %}
-    {{ form.as_p }}
+    <label for="id_question">Question:</label>
+    <input type="text" name="question" id="id_question" required><br><br>
+
+    <div id="choices">
+        <label for="id_choices_0">Choice 1:</label>
+        <input type="text" name="choices[]" id="id_choices_0" required><br>
+
+        <label for="id_choices_1">Choice 2:</label>
+        <input type="text" name="choices[]" id="id_choices_1" required><br>
+    </div>
+
+    <button type="button" id="add-choice">+</button>
     <button type="submit">Create</button>
 </form>
+
+<script>
+    $(document).ready(function() {
+        var choiceIndex = 2;
+
+        $('#add-choice').click(function() {
+            var newChoiceHtml = `
+            <label for="id_choices_${choiceIndex}">Choice ${choiceIndex + 1}:</label>
+            <input type="text" name="choices[]" id="id_choices_${choiceIndex}" required>
+            <button type="button" class="remove-choice">X</button><br>
+        `;
+
+            $('#choices').append(newChoiceHtml);
+            choiceIndex++;
+        });
+
+        $('#choices').on('click', '.remove-choice', function() {
+            $(this).prev().remove();
+            $(this).prev().remove();
+            $(this).next().remove();
+            $(this).remove();
+        });
+    });
+</script>
+
 </body>
 </html>

@@ -32,7 +32,7 @@ urlpatterns = [
     path('login/', LoginView.as_view(template_name='Login.html'), name='Login'),
     path('logout/', Logout, name='logout'),
     path('dashboard/', Dashboard, name='Dashboard'),
-    path('create_poll/', PollCreate, name='Create_poll'),
+    path('create_poll/', PollCreate, name='create_poll'),
 
 ]
 

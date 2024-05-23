@@ -1,10 +1,19 @@
 from django import forms
-from .Models import Poll, Question
+from .Models import Poll, Question, Choice
+from django.forms import formset_factory
+
 
 class QuestionForm(forms.ModelForm):
     class Meta:
         model = Question
         fields = ['text']
+
+class ChoiceForm(forms.ModelForm):
+    class Meta:
+        model = Choice
+        fields = ['text']
+
+ChoiceFormSet = formset_factory(ChoiceForm, extra=1)
 
 class PollForm(forms.ModelForm):
     class Meta:
