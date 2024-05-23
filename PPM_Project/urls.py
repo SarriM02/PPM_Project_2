@@ -22,7 +22,7 @@ from PPM_App.Views import PollCreateView, ResponseCreateView, PollResultsView, R
 from django.contrib.auth.views import LoginView, LogoutView
 
 urlpatterns = [
-    path('', Register, name='Register'),
+    path('', LoginView.as_view(template_name='Login.html'), name='Login'),
     path('polls/', PollCreateView.as_view(), name='create_poll'),
     path('polls/<int:poll_id>/responses/', ResponseCreateView.as_view(), name='submit_response'),
     path('polls/<int:poll_id>/results/', PollResultsView.as_view(), name='poll_results'),
@@ -33,3 +33,4 @@ urlpatterns = [
     path('logout/', LogoutView.as_view(), name='Logout'),
     path('dashboard/', Dashboard, name='Dashboard'),
 ]
+
