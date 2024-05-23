@@ -3,9 +3,11 @@ from rest_framework.permissions import IsAuthenticated
 from PPM_App.Models import Poll, Response
 from PPM_App.Serializers import PollSerializer, ResponseSerializer
 
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
+
+from PPM_App.Forms import PollForm
 
 class PollCreateView(generics.CreateAPIView):
     queryset = Poll.objects.all()
@@ -38,3 +40,18 @@ def Register(request):
 
 def Dashboard(request):
     return render(request, 'Dashboard.html')
+
+def Logout(request):
+    logout(request)
+    return redirect('Login')
+
+def PollCreate(request):
+    if request.method == 'POST':
+        form = PollForm(request.POST)
+        if form.is_valid():
+            poll = form.save(commit=False)
+            poll.save()
+            return redirect('Dashboard')
+    else:
+        form = PollForm()
+    return render(request, 'Create_poll.html', {'form': form})

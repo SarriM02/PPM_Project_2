@@ -18,7 +18,7 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path , include
-from PPM_App.Views import PollCreateView, ResponseCreateView, PollResultsView, Register, Dashboard
+from PPM_App.Views import PollCreateView, ResponseCreateView, PollResultsView, Register, Dashboard, Logout, PollCreate
 from django.contrib.auth.views import LoginView, LogoutView
 
 urlpatterns = [
@@ -30,7 +30,9 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls')),
     path('register/', Register, name='Register'),
     path('login/', LoginView.as_view(template_name='Login.html'), name='Login'),
-    path('logout/', LogoutView.as_view(), name='Logout'),
+    path('logout/', Logout, name='logout'),
     path('dashboard/', Dashboard, name='Dashboard'),
+    path('create_poll/', PollCreate, name='Create_poll'),
+
 ]
 

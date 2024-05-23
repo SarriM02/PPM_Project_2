@@ -15,8 +15,16 @@ class Question(models.Model):
         return self.text
 
 class Response(models.Model):
-    answer = models.CharField(max_length=200)
-    question = models.ForeignKey(Question, related_name='responses', on_delete=models.CASCADE)
+    poll = models.ForeignKey(Poll, related_name='responses', on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    choices = models.ManyToManyField('Choice')  # aggiunto questo campo
 
     def __str__(self):
-        return self.answer
+        return f'{self.user} responded to {self.poll}'
+
+class Choice(models.Model):
+    poll = models.ForeignKey(Poll, related_name='choices', on_delete=models.CASCADE)
+    text = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.text
