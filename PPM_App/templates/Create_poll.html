@@ -50,6 +50,7 @@
             }
 
             $('#choices').append(newForm); // Aggiunge il nuovo form alla lista delle scelte
+            $('#id_choices-TOTAL_FORMS').val(formCount + 1); //Aggiorna il numero totale di formsets
         });
 
         $('#choices').on('click', '.remove-choice', function() {

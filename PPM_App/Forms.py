@@ -7,7 +7,7 @@ class ChoiceForm(forms.ModelForm):
         model = Choice
         fields = ['text']
 
-ChoiceFormSet = inlineformset_factory(Poll, Choice, form=ChoiceForm, extra=10, can_delete=True)
+ChoiceFormSet = inlineformset_factory(Poll, Choice, form=ChoiceForm, extra=2, can_delete=True)
 
 class PollForm(forms.ModelForm):
     class Meta:
