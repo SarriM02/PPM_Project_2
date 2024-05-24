@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9842d8a8-5cf7-4414-a245-64061100d9f9" name="Changes" comment="Add Create_poll.html">
+    <list default="true" id="9842d8a8-5cf7-4414-a245-64061100d9f9" name="Changes" comment="First Fix Create_poll.html">
+      <change afterPath="$PROJECT_DIR$/PPM_App/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PPM_App/Forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/PPM_App/Forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PPM_App/Models.py" beforeDir="false" afterPath="$PROJECT_DIR$/PPM_App/Models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PPM_App/Serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/PPM_App/Serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PPM_App/Views.py" beforeDir="false" afterPath="$PROJECT_DIR$/PPM_App/Views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PPM_App/templates/Create_poll.html" beforeDir="false" afterPath="$PROJECT_DIR$/PPM_App/templates/Create_poll.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PPM_App/templates/Dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/PPM_App/templates/Dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PPM_Project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/PPM_Project/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PPM_Project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/PPM_Project/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
@@ -66,7 +68,7 @@
     &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR_AND_PREVIEW&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;71c17277&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;aa72f68b&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -128,7 +130,9 @@
       <workItem from="1716298539671" duration="9686000" />
       <workItem from="1716387917291" duration="3698000" />
       <workItem from="1716456394608" duration="2158000" />
-      <workItem from="1716470476990" duration="1173000" />
+      <workItem from="1716470476990" duration="1398000" />
+      <workItem from="1716481176176" duration="11061000" />
+      <workItem from="1716550762040" duration="5235000" />
     </task>
     <task id="LOCAL-00001" summary="General Login/Register Commit">
       <option name="closed" value="true" />
@@ -146,7 +150,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716467130790</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="First Fix Create_poll.html">
+      <option name="closed" value="true" />
+      <created>1716471875973</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1716471875973</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,6 +178,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="General Login/Register Commit" />
     <MESSAGE value="Add Create_poll.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Create_poll.html" />
+    <MESSAGE value="First Fix Create_poll.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="First Fix Create_poll.html" />
   </component>
 </project>

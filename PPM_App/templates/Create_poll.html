@@ -6,46 +6,65 @@
 </head>
 <body>
 <h1>Create a new poll</h1>
-<form method="post" action="{% url 'create_poll' %}">
+<form method="POST" action="{% url 'create_poll' %}">
     {% csrf_token %}
-    <label for="id_question">Question:</label>
-    <input type="text" name="question" id="id_question" required><br><br>
+    {{ form.as_p }}
 
     <div id="choices">
-        <label for="id_choices_0">Choice 1:</label>
-        <input type="text" name="choices[]" id="id_choices_0" required><br>
-
-        <label for="id_choices_1">Choice 2:</label>
-        <input type="text" name="choices[]" id="id_choices_1" required><br>
+        {{ formset.management_form }}
+        {% for form in formset %}
+            <div class="choice-form">
+                {{ form.id }}
+                {{ form.text }}
+                {% if forloop.counter > 2 %}
+                    <button type="button" class="remove-choice">Remove</button>
+                {% endif %}
+            </div>
+        {% endfor %}
     </div>
 
-    <button type="button" id="add-choice">+</button>
+    <button type="button" id="add-choice">Add Choice</button>
     <button type="submit">Create</button>
 </form>
 
 <script>
     $(document).ready(function() {
-        var choiceIndex = 2;
-
         $('#add-choice').click(function() {
-            var newChoiceHtml = `
-            <label for="id_choices_${choiceIndex}">Choice ${choiceIndex + 1}:</label>
-            <input type="text" name="choices[]" id="id_choices_${choiceIndex}" required>
-            <button type="button" class="remove-choice">X</button><br>
-        `;
+            var formCount = $('#choices .choice-form').length; // Calcola il numero attuale di campi
+            var emptyForm = $('#empty-form').html(); // Ottiene il modello del formset vuoto
+            var newForm = $('<div class="choice-form">' + emptyForm + '</div>'); // Crea un nuovo formset basato sul modello vuoto
 
-            $('#choices').append(newChoiceHtml);
-            choiceIndex++;
+            newForm.find(':input').each(function() {
+                var name = $(this).attr('name').replace(/__prefix__/, formCount); // Aggiorna l'indice del campo
+                var id = 'id_' + name;
+                $(this).attr({'name': name, 'id': id}).val('');
+            });
+
+            newForm.find('label').each(function() {
+                var newFor = $(this).attr('for').replace(/__prefix__/, formCount); // Aggiorna l'indice del label
+                $(this).attr('for', newFor);
+            });
+
+            if (formCount > 1) { // Cambiato a formCount > 1 per mostrare il pulsante "Remove" dalla terza opzione
+                newForm.append('<button type="button" class="remove-choice">Remove</button>'); // Aggiunge il pulsante "Remove" solo se ci sono più di due scelte
+            }
+
+            $('#choices').append(newForm); // Aggiunge il nuovo form alla lista delle scelte
         });
 
         $('#choices').on('click', '.remove-choice', function() {
-            $(this).prev().remove();
-            $(this).prev().remove();
-            $(this).next().remove();
-            $(this).remove();
+            $(this).closest('.choice-form').remove();
         });
     });
 </script>
 
+<!-- Modello del formset vuoto -->
+<div id="empty-form" style="display: none;">
+    {{ formset.empty_form.id }}
+    {{ formset.empty_form.text }}
+</div>
+
 </body>
 </html>
+
+

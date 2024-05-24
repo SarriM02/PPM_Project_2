@@ -1,6 +1,6 @@
 from rest_framework import generics
 from rest_framework.permissions import IsAuthenticated
-from PPM_App.Models import Poll, Response
+from PPM_App.Models import Poll, Response, Choice
 from PPM_App.Serializers import PollSerializer, ResponseSerializer
 
 from django.contrib.auth import login, logout, authenticate
@@ -49,8 +49,25 @@ def Logout(request):
 
 def PollCreate(request):
     if request.method == 'POST':
+        form = PollForm(request.POST)
+        formset = ChoiceFormSet(request.POST, prefix='choices')
+        if form.is_valid() and formset.is_valid():
+            poll = form.save(commit=False)
+            poll.user = request.user
+            poll.save()
 
-        return redirect('Dashboard')
+            for form in formset:
+                if form.cleaned_data.get('text'):
+                    choice = form.save(commit=False)
+                    choice.poll = poll
+                    choice.save()
+
+            return redirect('Dashboard')
+        else:
+            print("Form is invalid")
+            print("Form.errors: ", form.errors)
+            print("Formset.errors: ", formset.errors)
     else:
-
-        return render(request, 'Create_poll.html')
+        form = PollForm()
+        formset = ChoiceFormSet(prefix='choices')
+    return render(request, 'create_poll.html', {'form': form, 'formset': formset})
