@@ -1,11 +1,13 @@
 from rest_framework import generics
 from rest_framework.permissions import IsAuthenticated
-from PPM_App.Models import Poll, Response
+from PPM_App.Models import Poll, Response, Choice
 from PPM_App.Serializers import PollSerializer, ResponseSerializer
 
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
+
+from PPM_App.Forms import PollForm, ChoiceFormSet
 
 class PollCreateView(generics.CreateAPIView):
     queryset = Poll.objects.all()
@@ -21,6 +23,8 @@ class PollResultsView(generics.RetrieveAPIView):
     queryset = Poll.objects.all()
     serializer_class = PollSerializer
     permission_classes = [IsAuthenticated]
+
+
 
 def Register(request):
     if request.method == 'POST':
@@ -38,3 +42,32 @@ def Register(request):
 
 def Dashboard(request):
     return render(request, 'Dashboard.html')
+
+def Logout(request):
+    logout(request)
+    return redirect('Login')
+
+def PollCreate(request):
+    if request.method == 'POST':
+        form = PollForm(request.POST)
+        formset = ChoiceFormSet(request.POST, prefix='choices')
+        if form.is_valid() and formset.is_valid():
+            poll = form.save(commit=False)
+            poll.user = request.user
+            poll.save()
+
+            for form in formset:
+                if form.cleaned_data.get('text'):
+                    choice = form.save(commit=False)
+                    choice.poll = poll
+                    choice.save()
+
+            return redirect('Dashboard')
+        else:
+            print("Form is invalid")
+            print("Form.errors: ", form.errors)
+            print("Formset.errors: ", formset.errors)
+    else:
+        form = PollForm()
+        formset = ChoiceFormSet(prefix='choices')
+    return render(request, 'create_poll.html', {'form': form, 'formset': formset})

@@ -2,21 +2,24 @@ from django.db import models
 from django.contrib.auth.models import User
 
 class Poll(models.Model):
-    title = models.CharField(max_length=100)
+    id = models.AutoField(primary_key=True)
+    question = models.CharField(max_length=200)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='polls')
 
     def __str__(self):
-        return self.title
+        return self.question
 
-class Question(models.Model):
+class Choice(models.Model):
+    poll = models.ForeignKey(Poll, related_name='choices', on_delete=models.CASCADE)
     text = models.CharField(max_length=200)
-    poll = models.ForeignKey(Poll, related_name='questions', on_delete=models.CASCADE)
 
     def __str__(self):
         return self.text
 
 class Response(models.Model):
-    answer = models.CharField(max_length=200)
-    question = models.ForeignKey(Question, related_name='responses', on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='responses')
+    poll = models.ForeignKey(Poll, related_name='responses', on_delete=models.CASCADE)
+    choices = models.ManyToManyField(Choice, related_name='responses')
 
     def __str__(self):
-        return self.answer
+        return f'{self.user} responded to {self.poll}'
