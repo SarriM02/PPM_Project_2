@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path , include
-from PPM_App.Views import PollCreateView, ResponseCreateView, PollResultsView, Register, Dashboard, Logout, PollCreate
+from PPM_App.Views import PollCreateView, ResponseCreateView, PollResultsView, Register, Dashboard, Logout, PollCreate, Delete_Poll
 from django.contrib.auth.views import LoginView, LogoutView
 
 urlpatterns = [
@@ -15,6 +15,7 @@ urlpatterns = [
     path('logout/', Logout, name='logout'),
     path('dashboard/', Dashboard, name='Dashboard'),
     path('create_poll/', PollCreate, name='create_poll'),
+    path('delete_poll/<int:poll_id>/', Delete_Poll, name='Delete_poll'),
 
 ]
 

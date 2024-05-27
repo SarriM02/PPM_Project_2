@@ -6,6 +6,8 @@ from PPM_App.Serializers import PollSerializer, ResponseSerializer
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
+from django.http import JsonResponse
+
 
 from PPM_App.Forms import PollForm, ChoiceFormSet
 
@@ -41,7 +43,9 @@ def Register(request):
     return render(request, 'Register.html', {'form': form})
 
 def Dashboard(request):
-    return render(request, 'Dashboard.html')
+    polls = Poll.objects.all()
+    choices = Choice.objects.all()
+    return render(request, 'Dashboard.html', {'polls': polls, 'choices': choices})
 
 def Logout(request):
     logout(request)
@@ -71,3 +75,14 @@ def PollCreate(request):
         form = PollForm()
         formset = ChoiceFormSet(prefix='choices')
     return render(request, 'create_poll.html', {'form': form, 'formset': formset})
+
+def Delete_Poll(request, poll_id):
+    if request.method == 'DELETE':
+        poll = Poll.objects.get(id=poll_id)
+        if request.user == poll.user:
+            poll.delete()
+            return JsonResponse({'success': True})
+        else:
+            return JsonResponse({'success': False, 'error': 'Non autorizzato'}, status=403)
+    else:
+        return JsonResponse({'success': False, 'error': 'Metodo non valido'}, status=405)
