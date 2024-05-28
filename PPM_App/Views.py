@@ -1,12 +1,14 @@
 from rest_framework import generics
 from rest_framework.permissions import IsAuthenticated
-from PPM_App.Models import Poll, Response, Choice
-from PPM_App.Serializers import PollSerializer, ResponseSerializer
+from PPM_App.Models import Poll, Choice
+from PPM_App.Serializers import PollSerializer
 
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.forms import UserCreationForm
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.http import JsonResponse
+from django.contrib.auth.decorators import login_required
+from django.views.decorators.csrf import csrf_exempt
 
 
 from PPM_App.Forms import PollForm, ChoiceFormSet
@@ -15,17 +17,6 @@ class PollCreateView(generics.CreateAPIView):
     queryset = Poll.objects.all()
     serializer_class = PollSerializer
     permission_classes = [IsAuthenticated]
-
-class ResponseCreateView(generics.CreateAPIView):
-    queryset = Response.objects.all()
-    serializer_class = ResponseSerializer
-    permission_classes = [IsAuthenticated]
-
-class PollResultsView(generics.RetrieveAPIView):
-    queryset = Poll.objects.all()
-    serializer_class = PollSerializer
-    permission_classes = [IsAuthenticated]
-
 
 
 def Register(request):
@@ -86,3 +77,20 @@ def Delete_Poll(request, poll_id):
             return JsonResponse({'success': False, 'error': 'Non autorizzato'}, status=403)
     else:
         return JsonResponse({'success': False, 'error': 'Metodo non valido'}, status=405)
+
+@login_required
+@csrf_exempt
+def vote(request, poll_id, choice_id):
+    poll = Poll.objects.get(id=poll_id)
+    choice = Choice.objects.get(id=choice_id)
+
+    if request.user in poll.responded_users.all():
+        return JsonResponse({'success': False, 'error': 'User has already voted'})
+
+    choice.votes += 1
+    choice.save()
+
+    poll.responded_users.add(request.user)
+    poll.save()
+
+    return JsonResponse({'success': True})

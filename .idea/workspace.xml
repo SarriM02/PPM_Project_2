@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9842d8a8-5cf7-4414-a245-64061100d9f9" name="Changes" comment="General Login/Register Commit">
-      <change afterPath="$PROJECT_DIR$/PPM_App/static/Main_CSS.css" afterDir="false" />
+    <list default="true" id="9842d8a8-5cf7-4414-a245-64061100d9f9" name="Changes" comment="Add Css">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PPM_App/Models.py" beforeDir="false" afterPath="$PROJECT_DIR$/PPM_App/Models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PPM_App/Serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/PPM_App/Serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PPM_App/Views.py" beforeDir="false" afterPath="$PROJECT_DIR$/PPM_App/Views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PPM_App/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/PPM_App/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PPM_App/static/Main_CSS.css" beforeDir="false" afterPath="$PROJECT_DIR$/PPM_App/static/Main_CSS.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PPM_App/templates/Dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/PPM_App/templates/Dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PPM_Project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/PPM_Project/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PPM_Project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/PPM_Project/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
@@ -131,7 +133,8 @@
       <workItem from="1716387917291" duration="3698000" />
       <workItem from="1716456394608" duration="2158000" />
       <workItem from="1716800879910" duration="3859000" />
-      <workItem from="1716809271937" duration="5135000" />
+      <workItem from="1716809271937" duration="6918000" />
+      <workItem from="1716897551983" duration="8069000" />
     </task>
     <task id="LOCAL-00001" summary="General Login/Register Commit">
       <option name="closed" value="true" />
@@ -141,7 +144,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716303184979</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add Css">
+      <option name="closed" value="true" />
+      <created>1716817138214</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1716817138214</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,6 +160,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="General Login/Register Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="General Login/Register Commit" />
+    <MESSAGE value="Add Css" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Css" />
   </component>
 </project>
