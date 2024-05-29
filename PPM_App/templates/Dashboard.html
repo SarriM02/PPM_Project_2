@@ -3,8 +3,8 @@
 <head>
     <title>Dashboard</title>
     {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'Main_CSS.css' %}"></head>
     <link rel="stylesheet" href="{% static 'node_modules/bootstrap/dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'Dashboard_CSS.css' %}"></head>
 <body>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
@@ -31,16 +31,16 @@
             <div class="question">
                 <h2>{{ poll.question }}</h2>
             </div>
-            <div class="choice">
                 {% for choice in choices %}
                     {% if choice.poll == poll %}
-                        <p>{{ choice.text }}</p>
-                        {% if user not in poll.responded_users.all %}
-                            <button class="vote" onclick="vote({{ poll.id }}, {{ choice.id }})">Vote</button>
-                        {% endif %}
+                        <div class="choice_container">
+                            <div class="choice">{{ choice.text }}</div>
+                            {% if user not in poll.responded_users.all %}
+                                <button class="vote" onclick="vote({{ poll.id }}, {{ choice.id }})">Vote</button>
+                            {% endif %}
+                        </div>
                     {% endif %}
                 {% endfor %}
-            </div>
         </div>
         <div class="poll_center">
             <div class="results">
