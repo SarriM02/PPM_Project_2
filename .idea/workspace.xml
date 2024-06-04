@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9842d8a8-5cf7-4414-a245-64061100d9f9" name="Changes" comment="Add Navbar">
-      <change afterPath="$PROJECT_DIR$/static/Login_CSS.css" afterDir="false" />
+    <list default="true" id="9842d8a8-5cf7-4414-a245-64061100d9f9" name="Changes" comment="Graphics Upgrade">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PPM_App/static/Main_CSS.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/Dashboard_CSS.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PPM_App/templates/Dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/PPM_App/templates/Dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PPM_App/templates/Login.html" beforeDir="false" afterPath="$PROJECT_DIR$/PPM_App/templates/Login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PPM_App/templates/Register.html" beforeDir="false" afterPath="$PROJECT_DIR$/PPM_App/templates/Register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PPM_Project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/PPM_Project/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -139,7 +133,9 @@
       <workItem from="1716915718788" duration="1878000" />
       <workItem from="1716928987537" duration="177000" />
       <workItem from="1716988683869" duration="226000" />
-      <workItem from="1716988923712" duration="5178000" />
+      <workItem from="1716988923712" duration="5391000" />
+      <workItem from="1717417009734" duration="375000" />
+      <workItem from="1717508242967" duration="506000" />
     </task>
     <task id="LOCAL-00001" summary="General Login/Register Commit">
       <option name="closed" value="true" />
@@ -173,7 +169,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716917609706</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Graphics Upgrade">
+      <option name="closed" value="true" />
+      <created>1716994358571</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1716994358571</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,6 +188,7 @@
     <MESSAGE value="Add Css" />
     <MESSAGE value="Add Vote and Results" />
     <MESSAGE value="Add Navbar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Navbar" />
+    <MESSAGE value="Graphics Upgrade" />
+    <option name="LAST_COMMIT_MESSAGE" value="Graphics Upgrade" />
   </component>
 </project>
