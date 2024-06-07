@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9842d8a8-5cf7-4414-a245-64061100d9f9" name="Changes" comment="Graphics Upgrade">
+    <list default="true" id="9842d8a8-5cf7-4414-a245-64061100d9f9" name="Changes" comment="Add some Polls">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +134,8 @@
       <workItem from="1716988683869" duration="226000" />
       <workItem from="1716988923712" duration="5391000" />
       <workItem from="1717417009734" duration="375000" />
-      <workItem from="1717508242967" duration="506000" />
+      <workItem from="1717508242967" duration="614000" />
+      <workItem from="1717765541248" duration="1053000" />
     </task>
     <task id="LOCAL-00001" summary="General Login/Register Commit">
       <option name="closed" value="true" />
@@ -177,7 +177,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716994358571</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add some Polls">
+      <option name="closed" value="true" />
+      <created>1717508838996</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1717508838996</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,6 +197,7 @@
     <MESSAGE value="Add Vote and Results" />
     <MESSAGE value="Add Navbar" />
     <MESSAGE value="Graphics Upgrade" />
-    <option name="LAST_COMMIT_MESSAGE" value="Graphics Upgrade" />
+    <MESSAGE value="Add some Polls" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add some Polls" />
   </component>
 </project>
