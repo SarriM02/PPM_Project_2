@@ -1,13 +1,13 @@
 {
   "builds": [{
-    "src": "PPM_project/wsgi.py",
+    "src": "PPM_Project/wsgi.py",
     "use": "@vercel/python",
     "config": { "maxLambdaSize": "15mb" , "runtime": "python3.8" }
   }],
     "routes": [
         {
         "src": "/(.*)",
-        "dest": "PPM_project/wsgi.py"
+        "dest": "PPM_Project/wsgi.py"
         }
     ]
 
