@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9842d8a8-5cf7-4414-a245-64061100d9f9" name="Changes" comment="Fix Vercel">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="9842d8a8-5cf7-4414-a245-64061100d9f9" name="Changes" comment="Fix Vercel 2.0">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PPM_Project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/PPM_Project/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PPM_App/templates/Dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/PPM_App/templates/Dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PPM_App/templates/Login.html" beforeDir="false" afterPath="$PROJECT_DIR$/PPM_App/templates/Login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +81,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\marks\Desktop\PPM_Project_2\PPM_App\templates" />
       <recent name="C:\Users\marks\PycharmProjects\PPM_Project" />
       <recent name="C:\Users\marks\PycharmProjects\PPM_Project\PPM_App\static" />
       <recent name="C:\Users\marks\PycharmProjects\PPM_Project\PPM_App\templates" />
@@ -148,7 +148,9 @@
       <workItem from="1717940036960" duration="28000" />
       <workItem from="1717940068631" duration="3552000" />
       <workItem from="1718012979236" duration="1489000" />
-      <workItem from="1718018649550" duration="348000" />
+      <workItem from="1718018649550" duration="1330000" />
+      <workItem from="1718028433551" duration="227000" />
+      <workItem from="1718028686566" duration="1080000" />
     </task>
     <task id="LOCAL-00001" summary="General Login/Register Commit">
       <option name="closed" value="true" />
@@ -222,7 +224,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718013058389</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Fix Vercel 2.0">
+      <option name="closed" value="true" />
+      <created>1718019016358</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1718019016358</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,6 +248,7 @@
     <MESSAGE value="Add requirements.txt" />
     <MESSAGE value="Add Vercel" />
     <MESSAGE value="Fix Vercel" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix Vercel" />
+    <MESSAGE value="Fix Vercel 2.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix Vercel 2.0" />
   </component>
 </project>
