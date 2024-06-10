@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -13,7 +14,7 @@ SECRET_KEY = 'django-insecure-&qzh(*9s^h98&o&m!1(wh2h@w_7aggydvpo8z(i+w3km0(#0ox
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app','localhost']
+ALLOWED_HOSTS = ['.vercel.app', 'localhost']
 
 
 # Application definition
@@ -77,8 +78,15 @@ WSGI_APPLICATION = 'PPM_Project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': str(os.getenv('POSTGRES_DATABASE', 'verceldb')),
+        'USER': str(os.getenv('POSTGRES_USER', 'default')),
+        'PASSWORD': str(os.getenv('POSTGRES_PASSWORD', 'SPH63zneVNso')),
+        'HOST': str(os.getenv('POSTGRES_HOST', 'ep-solitary-star-a4f8s5rl-pooler.us-east-1.aws.neon.tech')),
+        'PORT': str(os.getenv('POSTGRES_PORT', '5432')),
+        'OPTIONS': {
+            'sslmode': 'require',
+        },
     }
 }
 
@@ -124,6 +132,6 @@ STATICFILES_DIRS = [BASE_DIR / 'static']
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-#Reindirizzamento
+# Reindirizzamento
 LOGIN_REDIRECT_URL = '/dashboard/'
 LOGOUT_REDIRECT_URL = '/login/'

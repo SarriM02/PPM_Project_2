@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9842d8a8-5cf7-4414-a245-64061100d9f9" name="Changes" comment="Add Vercel">
+    <list default="true" id="9842d8a8-5cf7-4414-a245-64061100d9f9" name="Changes" comment="Fix Vercel">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PPM_Project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/PPM_Project/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +73,11 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
@@ -140,6 +147,8 @@
       <workItem from="1717765541248" duration="1053000" />
       <workItem from="1717940036960" duration="28000" />
       <workItem from="1717940068631" duration="3552000" />
+      <workItem from="1718012979236" duration="1489000" />
+      <workItem from="1718018649550" duration="348000" />
     </task>
     <task id="LOCAL-00001" summary="General Login/Register Commit">
       <option name="closed" value="true" />
@@ -205,7 +214,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718012360213</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Fix Vercel">
+      <option name="closed" value="true" />
+      <created>1718013058389</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1718013058389</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,6 +237,7 @@
     <MESSAGE value="Add some Polls" />
     <MESSAGE value="Add requirements.txt" />
     <MESSAGE value="Add Vercel" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Vercel" />
+    <MESSAGE value="Fix Vercel" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix Vercel" />
   </component>
 </project>
