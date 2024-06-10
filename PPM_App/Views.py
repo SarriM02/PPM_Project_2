@@ -65,7 +65,7 @@ def PollCreate(request):
     else:
         form = PollForm()
         formset = ChoiceFormSet(prefix='choices')
-    return render(request, 'create_poll.html', {'form': form, 'formset': formset})
+    return render(request, 'Create_poll.html', {'form': form, 'formset': formset})
 
 def Delete_Poll(request, poll_id):
     if request.method == 'DELETE':
