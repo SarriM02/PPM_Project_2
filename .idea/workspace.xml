@@ -148,7 +148,7 @@
       <workItem from="1718012979236" duration="1489000" />
       <workItem from="1718018649550" duration="1330000" />
       <workItem from="1718028433551" duration="227000" />
-      <workItem from="1718028686566" duration="2283000" />
+      <workItem from="1718028686566" duration="2581000" />
     </task>
     <task id="LOCAL-00001" summary="General Login/Register Commit">
       <option name="closed" value="true" />
@@ -262,7 +262,23 @@
       <option name="project" value="LOCAL" />
       <updated>1718030532919</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Fix vercel.json">
+      <option name="closed" value="true" />
+      <created>1718031001160</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1718031001160</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Fix vercel.json">
+      <option name="closed" value="true" />
+      <created>1718031070986</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1718031070987</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
