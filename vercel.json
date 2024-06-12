@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "manage.py",
+      "src": "PPM_Project/wsgi.py",
       "use": "@vercel/python",
       "config": {
         "maxLambdaSize": "50mb",
@@ -14,11 +14,11 @@
   "routes": [
     {
       "src": "/static/(.*)",
-      "dest": "/staticfiles/$1"
-    },
+      "headers": { "cache-control": "s-maxage=31536000,immutable" },
+      "dest": "/staticfiles/$1"    },
     {
       "src": "/(.*)",
-      "dest": "manage.py"
+      "dest": "PPM_Project/wsgi.py"
     }
   ]
 }
