@@ -20,5 +20,11 @@
       "src": "/(.*)",
       "dest": "PPM_Project/wsgi.py"
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/static/(.*)",
+      "destination": "/staticfiles/$1"
+    }
   ]
 }
