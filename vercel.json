@@ -2,14 +2,6 @@
   "version": 2,
   "builds": [
     {
-      "src": "PPM_Project/wsgi.py",
-      "use": "@vercel/python",
-      "config": {
-        "maxLambdaSize": "50mb",
-        "runtime": "python3.12"
-      }
-    },
-    {
       "src": "manage.py",
       "use": "@vercel/python",
       "config": {
@@ -22,11 +14,11 @@
   "routes": [
     {
       "src": "/static/(.*)",
-      "headers": { "cache-control": "s-maxage=31536000,immutable" },
-      "dest": "/staticfiles/$1"    },
+      "dest": "/staticfiles/$1"
+    },
     {
       "src": "/(.*)",
-      "dest": "PPM_Project/wsgi.py"
+      "dest": "manage.py"
     }
   ]
 }
