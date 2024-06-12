@@ -13,14 +13,12 @@
   ],
   "routes": [
     {
+      "src": "/static/(.*)",
+      "dest": "/staticfiles/$1"
+    },
+    {
       "src": "/(.*)",
       "dest": "PPM_Project/wsgi.py"
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/staticfiles/(.*)",
-      "destination": "/static/$1"
     }
   ]
 }
