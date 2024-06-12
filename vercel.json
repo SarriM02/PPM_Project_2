@@ -13,12 +13,14 @@
   ],
   "routes": [
     {
-      "src": "/static/(.*)",
-      "headers": { "cache-control": "s-maxage=31536000,immutable" },
-      "dest": "/staticfiles/$1"    },
-    {
       "src": "/(.*)",
       "dest": "PPM_Project/wsgi.py"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/static/(.*)",
+      "destination": "/staticfiles/$1"
     }
   ]
 }

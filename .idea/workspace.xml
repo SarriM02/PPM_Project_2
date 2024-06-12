@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9842d8a8-5cf7-4414-a245-64061100d9f9" name="Changes" comment="Fix vercel.json">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vercel.json" beforeDir="false" afterPath="$PROJECT_DIR$/vercel.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -149,7 +150,7 @@
       <workItem from="1718018649550" duration="1330000" />
       <workItem from="1718028433551" duration="227000" />
       <workItem from="1718028686566" duration="6854000" />
-      <workItem from="1718181411499" duration="4221000" />
+      <workItem from="1718181411499" duration="5319000" />
     </task>
     <task id="LOCAL-00001" summary="General Login/Register Commit">
       <option name="closed" value="true" />
@@ -367,7 +368,23 @@
       <option name="project" value="LOCAL" />
       <updated>1718185501605</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Fix vercel.json">
+      <option name="closed" value="true" />
+      <created>1718185691947</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1718185691947</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Fix vercel.json">
+      <option name="closed" value="true" />
+      <created>1718185938351</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1718185938352</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
