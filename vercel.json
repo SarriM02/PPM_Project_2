@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "PPM_Project/wsgi.py",
+      "src": "menage.py",
       "use": "@vercel/python",
       "config": {
         "maxLambdaSize": "50mb",
