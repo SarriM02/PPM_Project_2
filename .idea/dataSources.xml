@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="db" uuid="19ce8f70-cc55-431c-845b-44dfa67aa89c">
-      <driver-ref>sqlite.xerial</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\marks\PycharmProjects\PPM_Project\db.sqlite3</jdbc-url>
-      <working-dir>$ProjectFileDir$</working-dir>
-    </data-source>
     <data-source source="LOCAL" name="verceldb@ep-solitary-star-a4f8s5rl-pooler.us-east-1.aws.neon.tech" uuid="b7b4936c-8b4e-498c-bfe5-e81cddd8847f">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>

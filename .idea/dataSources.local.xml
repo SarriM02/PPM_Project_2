@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal" created-in="PY-241.15989.155">
-    <data-source name="db" uuid="19ce8f70-cc55-431c-845b-44dfa67aa89c">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="SQLITE" />
-      <schema-mapping />
-    </data-source>
     <data-source name="verceldb@ep-solitary-star-a4f8s5rl-pooler.us-east-1.aws.neon.tech" uuid="b7b4936c-8b4e-498c-bfe5-e81cddd8847f">
       <database-info product="PostgreSQL" version="16.3" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.6.0" dbms="POSTGRES" exact-version="16.3" exact-driver-version="42.6">
         <identifier-quote-string>&quot;</identifier-quote-string>
