@@ -4,7 +4,7 @@
     <title>Register</title>
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'Login_CSS.css' %}">
-    <link rel="stylesheet" href="{% static 'node_modules/bootstrap/dist/css/bootstrap.min.css' %}">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 <h2>Register</h2>
@@ -15,7 +15,5 @@
 </form>
 <br>
 <a href="{% url 'Login' %}">Already have an account? Login here</a>
-<br>
-<a href="{% url 'admin:login' %}">Login as admin</a>
 </body>
 </html>
