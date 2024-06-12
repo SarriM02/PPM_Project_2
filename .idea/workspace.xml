@@ -5,11 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9842d8a8-5cf7-4414-a245-64061100d9f9" name="Changes" comment="Fix vercel.json">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PPM_Project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/PPM_Project/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vercel.json" beforeDir="false" afterPath="$PROJECT_DIR$/vercel.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PPM_Project/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/PPM_App/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PPM_Project/asgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/PPM_App/asgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PPM_Project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/PPM_App/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PPM_Project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/PPM_App/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PPM_Project/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/PPM_App/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Register.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,8 +87,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\marks\Desktop\PPM_Project_2" />
       <recent name="C:\Users\marks\Desktop\PPM_Project_2\PPM_App" />
+      <recent name="C:\Users\marks\Desktop\PPM_Project_2" />
       <recent name="C:\Users\marks\Desktop\PPM_Project_2\templates" />
       <recent name="C:\Users\marks\Desktop\PPM_Project_2\static" />
       <recent name="C:\Users\marks\Desktop\PPM_Project_2\PPM_App\templates" />
@@ -153,7 +157,7 @@
       <workItem from="1718018649550" duration="1330000" />
       <workItem from="1718028433551" duration="227000" />
       <workItem from="1718028686566" duration="6854000" />
-      <workItem from="1718181411499" duration="1786000" />
+      <workItem from="1718181411499" duration="2566000" />
     </task>
     <task id="LOCAL-00001" summary="General Login/Register Commit">
       <option name="closed" value="true" />
@@ -339,7 +343,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718182153434</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Fix vercel.json">
+      <option name="closed" value="true" />
+      <created>1718183276506</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1718183276506</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
