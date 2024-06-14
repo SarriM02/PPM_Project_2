@@ -9,3 +9,5 @@ PPM_App è un'applicazione web per la creazione e la gestione di sondaggi, svilu
 - **Votazione nei sondaggi esistenti**: Gli utenti possono votare nei sondaggi disponibili.
 - **Visualizzazione dei risultati dei sondaggi**: Gli utenti possono vedere i risultati aggregati dei sondaggi.
 - **Eliminazione dei sondaggi**: Gli utenti possono eliminare i sondaggi che hanno creato.
+
+## Link: https://ppm-project-2.vercel.app/
