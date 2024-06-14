@@ -4,24 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9842d8a8-5cf7-4414-a245-64061100d9f9" name="Changes" comment="Fix vercel.json">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PPM_App/static/css/Dashboard_CSS.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PPM_App/static/css/Login_CSS.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PPM_App/templates/Dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/PPM_App/templates/Dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PPM_App/templates/Login.html" beforeDir="false" afterPath="$PROJECT_DIR$/PPM_App/templates/Login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PPM_Project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/PPM_Project/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/css/Dashboard_CSS.74556555722b.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/css/Dashboard_CSS.74556555722b.css.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/css/Dashboard_CSS.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/css/Dashboard_CSS.css.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/css/Login_CSS.6fa5ee1148bd.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/css/Login_CSS.6fa5ee1148bd.css.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/css/Login_CSS.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/css/Login_CSS.css.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/staticfiles.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vercel.json" beforeDir="false" afterPath="$PROJECT_DIR$/vercel.json" afterDir="false" />
-    </list>
+    <list default="true" id="9842d8a8-5cf7-4414-a245-64061100d9f9" name="Changes" comment="Fix vercel.json" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -166,7 +149,7 @@
       <workItem from="1718028686566" duration="6854000" />
       <workItem from="1718181411499" duration="7132000" />
       <workItem from="1718192135261" duration="2507000" />
-      <workItem from="1718356941917" duration="1963000" />
+      <workItem from="1718356941917" duration="2277000" />
     </task>
     <task id="LOCAL-00001" summary="General Login/Register Commit">
       <option name="closed" value="true" />
@@ -504,7 +487,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718192685815</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Fix vercel.json">
+      <option name="closed" value="true" />
+      <created>1718358961575</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1718358961575</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

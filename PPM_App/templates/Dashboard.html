@@ -6,8 +6,8 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
-<body style="margin-top: 5%; background-color: #18780d">
-<nav class="navbar navbar-expand-lg bg-body-tertiary" style="position: fixed; top: 0; background-color: #8fcc70; width: 100%; border-bottom: 1px solid black; z-index: 1000;">
+<body style="margin-top: 5%; background-color: #000000">
+<nav class="navbar navbar-expand-lg bg-body-tertiary" style="position: fixed; top: 0; background-color: #880a0a; width: 100%; border-bottom: 1px solid black; z-index: 1000;">
     <div class="container-fluid">
         <a class="navbar-brand" style="color: white" href="#">DASHBOARD</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,7 +27,7 @@
 </nav>
 <br>
 {% for poll in polls %}
-    <div class="poll" style="display: flex; flex-direction: row; border: 3px solid black; background-color: #a9f675; margin: 15px;">
+    <div class="poll" style="display: flex; flex-direction: row; border: 3px solid black; background-color: #ffffff; margin: 15px;">
         <div class="poll_left" style="margin: 25px; display: flex; flex-direction: column; width: 55%; height: auto;">
             <div class="question">
                 <h2>{{ poll.question }}</h2>
