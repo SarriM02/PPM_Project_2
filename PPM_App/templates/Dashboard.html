@@ -4,24 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'css/Dashboard_CSS.css' %}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
-<body>
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<body style="margin-top: 5%; background-color: #18780d">
+<nav class="navbar navbar-expand-lg bg-body-tertiary" style="position: fixed; top: 0; background-color: #8fcc70; width: 100%; border-bottom: 1px solid black; z-index: 1000;">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">DASHBOARD</a>
+        <a class="navbar-brand" style="color: white" href="#">DASHBOARD</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'create_poll' %}">NEW POLL</a>
+                    <a class="nav-link" style="color: white" href="{% url 'create_poll' %}">NEW POLL</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'logout' %}">LOGOUT</a>
+                    <a class="nav-link" style="color: white" href="{% url 'logout' %}">LOGOUT</a>
                 </li>
             </ul>
         </div>
@@ -29,23 +27,23 @@
 </nav>
 <br>
 {% for poll in polls %}
-    <div class="poll">
-        <div class="poll_left">
+    <div class="poll" style="display: flex; flex-direction: row; border: 3px solid black; background-color: #a9f675; margin: 15px;">
+        <div class="poll_left" style="margin: 25px; display: flex; flex-direction: column; width: 55%; height: auto;">
             <div class="question">
                 <h2>{{ poll.question }}</h2>
             </div>
                 {% for choice in choices %}
                     {% if choice.poll == poll %}
-                        <div class="choice_container">
-                            <div class="choice">{{ choice.text }}</div>
+                        <div class="choice_container" style="display: flex; flex-direction: row;">
+                            <div class="choice" style="margin-right: 2%;">{{ choice.text }}</div>
                             {% if user not in poll.responded_users.all %}
-                                <button class="vote" onclick="vote({{ poll.id }}, {{ choice.id }})">Vote</button>
+                                <button class="vote" style="height: min-content;" onclick="vote({{ poll.id }}, {{ choice.id }})">Vote</button>
                             {% endif %}
                         </div>
                     {% endif %}
                 {% endfor %}
         </div>
-        <div class="poll_center">
+        <div class="poll_center" style="margin: 25px; display: flex; flex-direction: column; width: 30%; height: auto;">
             <div class="results">
                 <h3>Results</h3>
                 {% for choice in choices %}
@@ -55,16 +53,16 @@
                 {% endfor %}
             </div>
         </div>
-        <div class="poll_right">
+        <div class="poll_right" style="margin: 25px; display: flex; flex-direction: column; position: relative; justify-content: space-between; width: 15%; height: auto;">
             {% if user == poll.user %}
-                <button class="delete" onclick="deletePoll({{ poll.id }})">
+                <button class="delete" style="margin: 0; height: auto; width: min-content; align-self: flex-end; color: black; background-color: #ffffff;" onclick="deletePoll({{ poll.id }})">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
                         <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
                         <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
                     </svg>
                 </button>
             {% endif %}
-            <div class="user">
+            <div class="user" style="align-self: flex-end; position: absolute; top: 90%; right: 2%;" >
                 <p>Created by: {{ poll.user }}</p>
             </div>
         </div>
