@@ -1,5 +1,8 @@
-Una volta entrato sul sito si avrà la possilità di loggarsi o di registrarsi se non si ha ancora un accaunt.
-Effettuato l'accesso si potrà:
-- Rispondere e vedere i risultati dei sondaggi propri o creati da altri utenti.
-- Creare nuovi sondaggi aggiungendo un qualunque numero di risposte.
-- Eliminare i propri sondaggi.
+Progetto PPM_App
+Questo progetto è un'applicazione web per la creazione e la gestione di sondaggi. È scritto in Python e utilizza il framework Django.  
+Caratteristiche
+Registrazione e accesso degli utenti
+Creazione di nuovi sondaggi
+Votazione nei sondaggi esistenti
+Visualizzazione dei risultati dei sondaggi
+Eliminazione dei sondaggi creati dall'utente
