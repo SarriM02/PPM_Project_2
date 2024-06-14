@@ -5,10 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: 'Roboto', sans-serif;
+            color: #2c3e50;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        h2 {
+            color: #e74c3c;
+            margin-bottom: 20px;
+        }
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        button {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #c0392b;
+        }
+        a {
+            color: #e74c3c;
+            margin-top: 15px;
+            display: inline-block;
+        }
+        a:hover {
+            color: #c0392b;
+        }
+    </style>
 </head>
-<body style="display: flex; flex-direction: column; align-items: center; justify-content: flex-start; height: auto; text-align: center; padding: 20px;">
+<body>
 <h2>Login</h2>
-<form method="POST" style="display: flex; flex-direction: column; align-items: center; margin: auto;">
+<form method="POST">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Login</button>
@@ -17,4 +67,3 @@
 <a href="{% url 'Register' %}">Don't have an account? Register here</a>
 </body>
 </html>
-
