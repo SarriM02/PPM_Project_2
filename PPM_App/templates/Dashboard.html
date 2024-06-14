@@ -102,17 +102,52 @@
         </ul>
     </div>
 </nav>
-
-<script>
-    function toggleNavbar() {
-        var navbar = document.querySelector('.navbar');
-        navbar.classList.toggle('expanded');
-    }
-</script>
+<br>
+{% for poll in polls %}
+    <div class="poll" style="display: flex; flex-direction: row; border: 3px solid #c0392b; border-radius: 10px; background-color: #ffffff; margin: 40px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+        <div class="poll_left" style="margin: 25px; display: flex; flex-direction: column; width: 55%; height: auto;">
+            <div class="question">
+                <h2 style="color: #2c3e50;">{{ poll.question }}</h2>
+            </div>
+            {% for choice in choices %}
+                {% if choice.poll == poll %}
+                    <div class="choice_container" style="display: flex; flex-direction: row; margin-bottom: 10px;">
+                        <div class="choice" style="margin-right: 2%; color: #2c3e50;">{{ choice.text }}</div>
+                        {% if user not in poll.responded_users.all %}
+                            <button class="vote" style="height: min-content; padding: 5px 10px; background-color: #e74c3c; color: white; border: none; border-radius: 5px; cursor: pointer;" onclick="vote({{ poll.id }}, {{ choice.id }})">Vote</button>
+                        {% endif %}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div class="poll_center" style="margin: 25px; display: flex; flex-direction: column; width: 30%; height: auto;">
+            <div class="results">
+                <h3 style="color: #2c3e50;">Results</h3>
+                {% for choice in choices %}
+                    {% if choice.poll == poll %}
+                        <p style="color: #34495e;">{{ choice.text }} - {{ choice.votes }} votes</p>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        <div class="poll_right" style="margin: 25px; display: flex; flex-direction: column; position: relative; justify-content: space-between; width: 15%; height: auto;">
+            {% if user == poll.user %}
+                <button class="delete" style="margin: 0; height: auto; width: min-content; align-self: flex-end; color: #e74c3c; background-color: #ffffff; border: 1px solid #e74c3c; border-radius: 5px; cursor: pointer;" onclick="deletePoll({{ poll.id }})">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
+                        <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
+                    </svg>
+                </button>
+            {% endif %}
+            <div class="user" style="align-self: flex-end; position: absolute; top: 90%; right: 2%; color: #7f8c8d;">
+                <p>Created by: {{ poll.user }}</p>
+            </div>
+        </div>
+    </div>
+{% endfor %}
 </body>
+
 </html>
-
-
 
 <script>
     function getCookie(name) {
